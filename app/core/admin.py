@@ -26,5 +26,7 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
 
-
+admin.site.site_header = "CrowdFun Admin"
+admin.site.site_title = "CrowdFun Admin Portal"
+admin.site.index_title = "Welcome to CrowdFun Portal"
 admin.site.register(models.User, UserAdmin)
