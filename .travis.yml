@@ -11,7 +11,7 @@ jobs:
       name: "Unit Tests"
       env:
         - SECRET_KEY=supersecretkey
-        - DB_HOST=host.docker.internal
+        - DB_HOST=db
         - DB_NAME=app
         - DB_USER=postgres
         - DB_PASS=supersecretpassword

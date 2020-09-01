@@ -14,7 +14,7 @@ services:
               python manage.py runserver 0.0.0.0:8000"
     environment:
       - SECRET_KEY=${SECRET_KEY}
-      - DB_HOST=host.docker.internal
+      - DB_HOST=db
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
