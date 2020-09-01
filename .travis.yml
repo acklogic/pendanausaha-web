@@ -6,10 +6,11 @@ services:
   - docker
 
 env:
+  - SECRET_KEY=supersecretkey
   - DB_HOST=host.docker.internal
   - DB_NAME=crowdfun
   - DB_USER=postgres
-  - DB_PASS=password
+  - DB_PASS=supersecretpassword
   - DB_PORT=5432
   - DB=postgres
 
