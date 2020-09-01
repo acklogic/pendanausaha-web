@@ -19,8 +19,6 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
       - DB_PORT=${DB_PORT}
-    links:
-      - "db:database"
     depends_on:
       - db
 

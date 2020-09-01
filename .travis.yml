@@ -5,6 +5,14 @@ python:
 services:
   - docker
 
+env:
+  - DB_HOST=host.docker.internal
+  - DB_NAME=crowdfun
+  - DB_USER=postgres
+  - DB_PASS=password
+  - DB_PORT=5432
+  - DB=postgres
+
 before_script: pip install docker-compose
 
 script:
