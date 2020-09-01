@@ -5,16 +5,15 @@ python:
 services:
   - docker
 
-env:
-  - SECRET_KEY=supersecretkey
-  - DB_HOST=host.docker.internal
-  - DB_NAME=crowdfun
-  - DB_USER=postgres
-  - DB_PASS=supersecretpassword
-  - DB_PORT=5432
-  - DB=postgres
-
 before_script: pip install docker-compose
+
+env:
+  - SECRET_KEY="supersecretkey"
+  - DB_HOST="host.docker.internal"
+  - DB_NAME="app"
+  - DB_USER="postgres"
+  - DB_PASS="supersecretpassword"
+  - DB_PORT="5432"
 
 script:
   - docker-compose run app sh -c "python manage.py test --settings=app.settings.ci && flake8"
