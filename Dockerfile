@@ -5,7 +5,7 @@ LABEL AUTHOR=heritechie@gmail.com
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
-COPY  .env /.env
+COPY  ./.env /.env
 
 RUN apk update \
     && apk add --virtual build-deps gcc python3-dev musl-dev \
