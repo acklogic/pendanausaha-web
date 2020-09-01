@@ -22,7 +22,8 @@ class Business(models.Model):
 
 
 class BusinessCampaign(models.Model):
-    business = models.OneToOneField(Business, on_delete=models.CASCADE, primary_key=True)
+    business = models.OneToOneField(
+        Business, on_delete=models.CASCADE, primary_key=True)
     title = models.CharField(max_length=255)
     stock_code = models.CharField(max_length=4)
     stock_price = models.PositiveIntegerField()
@@ -35,7 +36,8 @@ class BusinessCampaign(models.Model):
 
 
 class CampaignImage(models.Model):
-    campaign = models.ForeignKey(BusinessCampaign, default=None, on_delete=models.CASCADE)
+    campaign = models.ForeignKey(
+        BusinessCampaign, default=None, on_delete=models.CASCADE)
     image = models.ImageField(upload_to="campaign_images/")
 
     def __str__(self) -> str:
